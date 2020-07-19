@@ -28,7 +28,7 @@ header{
   display:flex;
   flex-wrap:wrap;
   width:100%;
-  height:50%;
+  height:75%;
 }
 .card{
   display:flex;
@@ -56,6 +56,7 @@ header{
   box-shadow:2px 2px 2px 1px grey;
   font-size:200%;
   width:340px;
+  margin:10px;
 }
 #blink{
 color:red;

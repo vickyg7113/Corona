@@ -244,23 +244,23 @@ color:red;
        res=sdata.data.regional[i].loc;
       if(result==res)
       {
-      var loc=document.createElement("p");
+      loc=document.createElement("p");
       loc.innerHTML+="State: "+sdata.data.regional[i].loc;
       stateC.append(loc);
       
-      var stC=document.createElement("p");
+      stC=document.createElement("p");
       stC.innerHTML+="Total Confirmed: "+sdata.data.regional[i].totalConfirmed;
       stateC.append(stC);
       
-      var stD=document.createElement("p");
+      stD=document.createElement("p");
       stD.innerHTML+="Total Deaths: "+sdata.data.regional[i].deaths;
       stateC.append(stD);
       
-      var stR=document.createElement("p");
+      stR=document.createElement("p");
       stR.innerHTML+="Recovered: "+sdata.data.regional[i].discharged;
       stateC.append(stR);
       
-      var sImg=document.createElement("img");
+      sImg=document.createElement("img");
       sImg.setAttribute("src","state"+i+".jpeg");
       sImg.setAttribute("width","200px;");
       sImg.setAttribute("height","200px");

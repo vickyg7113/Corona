@@ -209,7 +209,8 @@ color:red;
    sec.append(drop);
    
    btn=document.getElementById("btn");
-   sec.append(btn);
+  btn.classList.add("btn");
+  sec.append(btn);
    
    rbtn=document.getElementById("rbtn");
    rbtn.classList.add("rbtn");

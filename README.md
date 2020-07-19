@@ -28,7 +28,7 @@ header{
   display:flex;
   flex-wrap:wrap;
   width:100%;
-  height:75%;
+  height:900px;
 }
 .card{
   display:flex;
@@ -105,7 +105,13 @@ color:red;
   flex-wrap:wrap;
   justify-content:space-around;
 }
-     
+  footer{
+   font-size:150%;
+   text-align:center;
+   border:2px solid black;
+   border-radius:10px;
+   margin:10px;
+ }  
  </style> 
  </head> 
  <body> 
@@ -200,6 +206,10 @@ color:red;
    simg=document.createElement("div");
    simg.classList.add("simg");
    stateC.append(simg);
+  
+  var footer = document.createElement("footer"); 
+  footer.textContent="All copy rights reserved";
+  body.append(footer);
   });
   
   function sta(b){

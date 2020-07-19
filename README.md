@@ -9,6 +9,7 @@
 h1{
   border:2px solid black;
   width:200px;
+  margin:10px;
 }
 h2{
   margin-left:20px;

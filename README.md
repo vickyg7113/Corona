@@ -79,16 +79,27 @@ color:red;
  margin-left:auto;
  margin-right:auto;
 }
-#btn
+.btn
 {
- font-size:100%;
+ font-size:150%;
  box-shadow:2px 2px 2px 2px grey;
  border-radius:10px;
- display:block;
- margin-left:auto;
- margin-right:auto;
- margin-top:40px;
+ display:inline;
+ margin-left:30%;
+ margin-top:20px;
 }
+.rbtn
+{
+ font-size:150%;
+ box-shadow:2px 2px 2px 2px grey;
+ border-radius:10px;
+ display:inline;
+ margin-left:25%;
+ margin-top:20px;
+}
+
+ 
+
 .stateC
 {
   margin-left:auto;
@@ -122,10 +133,11 @@ color:red;
    <select id="state"> <option value="Andhra Pradesh">Andhra Pradesh</option> <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option> <option value="Arunachal Pradesh">Arunachal Pradesh</option> <option value="Assam">Assam</option> <option value="Bihar">Bihar</option> <option value="Chandigarh">Chandigarh</option> <option value="Chhattisgarh">Chhattisgarh</option> <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option><option value="Delhi">Delhi</option> <option value="Ladakh">Ladakh</option> <option value="Puducherry">Puducherry</option> <option value="Goa">Goa</option> <option value="Gujarat">Gujarat</option> <option value="Haryana">Haryana</option> <option value="Himachal Pradesh">Himachal Pradesh</option> <option value="Jammu and Kashmir">Jammu and Kashmir</option> <option value="Jharkhand">Jharkhand</option> <option value="Karnataka">Karnataka</option> <option value="Kerala">Kerala</option> <option value="Madhya Pradesh">Madhya Pradesh</option> <option value="Maharashtra">Maharashtra</option> <option value="Manipur">Manipur</option> <option value="Meghalaya">Meghalaya</option> <option value="Mizoram">Mizoram</option> <option value="Nagaland">Nagaland</option> <option value="Odisha">Odisha</option> <option value="Punjab">Punjab</option> <option value="Rajasthan">Rajasthan</option> <option value="Sikkim">Sikkim</option> <option value="Tamil Nadu">Tamil Nadu</option> <option value="Telangana">Telangana</option> <option value="Tripura">Tripura</option> <option value="Uttar Pradesh">Uttar Pradesh</option> <option value="Uttarakhand">Uttarakhand</option> <option value="West Bengal">West Bengal</option> </select> 
   </form> 
   <blink id="blink"> 
-   <i>Note: If you want to see another state details, please refresh the page.</i> 
+   <i>Note: If you want to see another state details, please hit to default button.</i> 
   </blink> 
   <button id="btn" onclick="sta(this)">Submit</button> 
-  <script>
+  <button id="rbtn" onclick="remove()">To default</button>
+ <script>
     fetch('https://api.rootnet.in/covid19-in/stats/latest').then((response)=>
     {
       return response.json();
@@ -199,6 +211,10 @@ color:red;
    btn=document.getElementById("btn");
    sec.append(btn);
    
+   rbtn=document.getElementById("rbtn");
+   rbtn.classList.add("rbtn");
+   sec.append(rbtn);
+   
    stateC=document.createElement("div");
    stateC.classList.add("stateC");
    sec.append(stateC);
@@ -254,6 +270,15 @@ color:red;
      }
    });
    } 
+ function remove()
+  {
+    stateC.removeChild(loc);
+    stateC.removeChild(stC);
+    stateC.removeChild(stD);
+    stateC.removeChild(stR);
+    simg.removeChild(sImg);
+  }
+  
  </script> 
  </body>
 </html>

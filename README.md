@@ -230,7 +230,7 @@ color:red;
   });
   
   function sta(b){
-     b.disabled=true;
+
     fetch('https://api.rootnet.in/covid19-in/stats/latest').then((sresponse)=>
     {
       return sresponse.json();
